@@ -1,0 +1,74 @@
+/***
+    Sidebar
+***/
+
+.expanded-button[view="viewCustomizeSidebar"],
+.expanded-button[extensionId="{b9db16a4-6edc-47ec-a1f4-b86292ed211d}"],
+.button-background.labelled label {
+    display: none !important;
+}
+
+.tools-and-extensions.actions-list:has(.expanded-button) {
+    display: flex !important;
+    flex-direction: row !important;
+    padding-bottom: 3px !important;
+}
+
+button {
+    padding-block-start: 0 !important;
+}
+
+.button-background img {
+    margin: auto !important;
+}
+
+.button-background {
+    scale: 0.9 !important;
+}
+
+/* Hide Sidebar button */
+#sidebar-button {
+    display: none !important;
+}
+
+
+/***
+    Floating Browser Container
+***/
+
+tabbox#tabbrowser-tabbox {
+    margin: 3px 8px 8px 0px !important;
+    outline: 0 !important;
+    border-radius: 6px !important;
+
+    /* Add container radius */
+    browser,
+    #tabbrowser-tabpanels {
+        border-radius: 6px !important;
+    }
+}
+
+
+/***
+    More
+***/
+
+/* Disable Status Bar */
+#statuspanel {
+    display: none !important;
+}
+
+/* Pinned Tab Height */
+.tabbrowser-tab[pinned=""],
+.tabbrowser-tab[pinned="true"] {
+    height: 50px !important;
+}
+
+/* Add Pinned Separator */
+#vertical-pinned-tabs-container-separator {
+    display: block !important;
+    opacity: 42% !important;
+}
+
+/*****************************/
+
