@@ -65,7 +65,7 @@ tabbox#tabbrowser-tabbox:not([sidebar-shown]) {
 }
 
 /* Add Pinned Separator */
-#vertical-pinned-tabs-container-separator {
+#vertical-pinned-tabs-container:not(:empty) + #vertical-pinned-tabs-container-separator {
     display: block !important;
     opacity: 42% !important;
 }
