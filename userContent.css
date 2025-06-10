@@ -1,0 +1,15 @@
+@-moz-document url(about:privatebrowsing) {
+body {
+    background: #2b2a33;
+}
+
+div[class="showPrivate showSearch container"] {
+    display: none !important;
+}
+}
+
+@-moz-document url(about:home), url(about:newtab) {
+.wallpaper-attribution {
+    display: none !important;
+}
+}

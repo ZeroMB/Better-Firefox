@@ -26,18 +26,13 @@ button {
     scale: 0.9 !important;
 }
 
-/* Hide Sidebar button */
-#sidebar-button {
-    display: none !important;
-}
-
 
 /***
     Floating Browser Container
 ***/
 
 tabbox#tabbrowser-tabbox {
-    margin: 3px 8px 8px 0px !important;
+    margin: 4px 8px 8px 0px !important;
     outline: 0 !important;
     border-radius: 6px !important;
 
@@ -45,7 +40,12 @@ tabbox#tabbrowser-tabbox {
     browser,
     #tabbrowser-tabpanels {
         border-radius: 6px !important;
+        clip-path: inset(0 round 6px);
     }
+}
+
+tabbox#tabbrowser-tabbox:not([sidebar-shown]) {
+    margin: 4px 8px 8px 8px !important;
 }
 
 
@@ -69,6 +69,3 @@ tabbox#tabbrowser-tabbox {
     display: block !important;
     opacity: 42% !important;
 }
-
-/*****************************/
-
