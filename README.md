@@ -19,20 +19,20 @@ A collection of Firefox vertical tabs configuration flags and CSS customizations
 
 1. Open Firefox and type `about:config` in the address bar
 2. Click "Accept the Risk and Continue"
-3. Search for each configuration flag listed below and set the values accordingly
+3. Search for `toolkit.legacyUserProfileCustomizations.stylesheets`
+4. Set the value to `true` to enable custom CSS support
 
-### Step 2: Browser Configuration
+### Step 2: Apply CSS Files
 
-Set these flags in `about:config`:
+1. Find your Firefox profile folder:
+   - Type `about:profiles` in the address bar
+   - Look for "Profile: default" and click "Open Directory" under the 'Root Directory' section.
 
-| Flag | Value | Purpose |
-|------|-------|---------|
-| `toolkit.legacyUserProfileCustomizations.stylesheets` | `true` | Enable custom CSS |
-| `devtools.debugger.remote-enabled` | `true` | Enable browser toolbox |
-| `devtools.chrome.enabled` | `true` | Enable browser toolbox shortcut |
-| `browser.sessionstore.restore_pinned_tabs_on_demand` | `true` | Disable auto load pinned bookmarks on startup |
-| `browser.tabs.loadBookmarksInTabs` | `true` | Open bookmarks in new tab |
-| `browser.tabs.closeWindowWithLastTab` | `false` | Prevent browser close when closing last tab |
+2. Create a new folder named `chrome` in your profile directory (if it doesn't already exist).
+
+3. Place the CSS files from this repository into the `chrome` folder
+
+4. Restart Firefox to apply changes
 
 ### Step 3: User Customization Flags
 
@@ -48,17 +48,17 @@ Create and configure these custom flags in `about:config`:
 | `user.horizontal-sidebar.hide-extensions` | `true` | Hide sidebar extensions |
 | `user.horizontal-sidebar.hide-specific-extension` | `true` | Hide specific extensions |
 
-### Step 4: Apply CSS Files
+### Step 4: Browser Configuration
 
-1. Find your Firefox profile folder:
-   - Type `about:profiles` in the address bar
-   - Look for "Profile: default" and click "Open Directory" under the 'Root Directory' section.
+Set these flags in `about:config`:
 
-2. Create a new folder named `chrome` in your profile directory (if it doesn't already exist).
-
-3. Place the CSS files from this repository into the `chrome` folder
-
-4. Restart Firefox to apply changes
+| Flag | Value | Purpose |
+|------|-------|---------|
+| `browser.sessionstore.restore_pinned_tabs_on_demand` | `true` | Disable auto load pinned bookmarks on startup |
+| `browser.tabs.loadBookmarksInTabs` | `true` | Open bookmarks in new tab |
+| `browser.tabs.closeWindowWithLastTab` | `false` | Prevent browser close when closing last tab |
+| `devtools.debugger.remote-enabled` | `true` | Enable browser toolbox |
+| `devtools.chrome.enabled` | `true` | Enable browser toolbox shortcut |
 
 ## Troubleshooting
 
