@@ -2,7 +2,7 @@
 
 A collection of Firefox configuration flags and CSS customizations to enhance your browsing experience with improved UI and functionality.
 
-![image](https://github.com/user-attachments/assets/699f0048-b2b3-42df-894e-b71ffeb34a97)
+![image](https://github.com/user-attachments/assets/ef19e084-7e4a-4f5f-ba16-c95fa2495a6c)
 
 ## Features
 
