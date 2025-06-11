@@ -1,6 +1,8 @@
 # Better Firefox
 
-A collection of Firefox configuration flags and CSS customizations to enhance your browsing experience with improved UI and functionality.
+A collection of Firefox vertical tabs configuration flags and CSS customizations to enhance your browsing experience with improved UI and functionality.
+
+![Preview](https://github.com/user-attachments/assets/b9ca6fac-7156-4d5c-8306-38dff2ab4b94)
 
 ## Features
 
