@@ -1,29 +1,52 @@
 /***
-    Sidebar
+    Horizontal Sidebar
 ***/
 
-.expanded-button[view="viewCustomizeSidebar"],
-.expanded-button[extensionId="{b9db16a4-6edc-47ec-a1f4-b86292ed211d}"],
-.button-background.labelled label {
-    display: none !important;
-}
+@media (-moz-pref("user.horizontal-sidebar")) {
 
-.tools-and-extensions.actions-list:has(.expanded-button) {
-    display: flex !important;
-    flex-direction: row !important;
-    padding-bottom: 3px !important;
-}
+    .expanded-button[view="viewCustomizeSidebar"],
+    .button-background.labelled label {
+        display: none !important;
+    }
 
-button {
-    padding-block-start: 0 !important;
-}
+    .tools-and-extensions.actions-list:has(.expanded-button) {
+        display: flex !important;
+        flex-direction: row !important;
+        padding-bottom: 4px !important;
+    }
 
-.button-background img {
-    margin: auto !important;
-}
+    .tools-and-extensions.actions-list {
+        justify-content: space-between !important;
+    }
 
-.button-background {
-    scale: 0.9 !important;
+    button {
+        padding-block-start: 0 !important;
+    }
+
+    .button-background img {
+        margin: auto !important;
+    }
+
+    .button-background {
+        scale: 0.9 !important;
+    }
+
+    /* Hide sidebar extensions */
+    @media (-moz-pref("user.horizontal-sidebar.hide-extensions")) {
+        .expanded-button[extension] {
+            display: none !important;
+        }
+    }
+
+    /* Hide specific extension */
+    @media (-moz-pref("user.horizontal-sidebar.hide-specific-extension")) {
+
+        .expanded-button[extensionId="{c3c10168-4186-445c-9c5b-63f12b8e2c87}"],
+        /* Add your extension ID here */
+        .expanded-button[extensionId="{446900e4-71c2-419f-a6a7-df9c091e268b}"] {
+            display: none !important;
+        }
+    }
 }
 
 
@@ -31,41 +54,50 @@ button {
     Floating Browser Container
 ***/
 
-tabbox#tabbrowser-tabbox {
-    margin: 4px 8px 8px 0px !important;
-    outline: 0 !important;
-    border-radius: 6px !important;
-
-    /* Add container radius */
-    browser,
-    #tabbrowser-tabpanels {
+@media (-moz-pref("user.floating-browser-container")) {
+    tabbox#tabbrowser-tabbox {
+        margin: 4px 8px 8px 0px !important;
+        outline: 0 !important;
         border-radius: 6px !important;
-        clip-path: inset(0 round 6px);
-    }
-}
 
-tabbox#tabbrowser-tabbox:not([sidebar-shown]) {
-    margin: 4px 8px 8px 8px !important;
+        /* Add container radius */
+        browser,
+        #tabbrowser-tabpanels {
+            border-radius: 6px !important;
+            clip-path: inset(0 round 6px);
+        }
+    }
+
+    tabbox#tabbrowser-tabbox:not([sidebar-shown]) {
+        margin: 4px 8px 8px 8px !important;
+    }
 }
 
 
 /***
-    More
+    Small Tweaks
 ***/
 
 /* Disable Status Bar */
-#statuspanel {
-    display: none !important;
+@media (-moz-pref("user.disable-status-bar")) {
+    #statuspanel {
+        display: none !important;
+    }
 }
 
-/* Pinned Tab Height */
-.tabbrowser-tab[pinned=""],
-.tabbrowser-tab[pinned="true"] {
-    height: 50px !important;
+/* Increase Pinned Tab Height */
+@media (-moz-pref("user.increase-pinned-tab-height")) {
+
+    .tabbrowser-tab[pinned=""],
+    .tabbrowser-tab[pinned="true"] {
+        height: 50px !important;
+    }
 }
 
 /* Add Pinned Separator */
-#vertical-pinned-tabs-container:not(:empty) + #vertical-pinned-tabs-container-separator {
-    display: block !important;
-    opacity: 42% !important;
+@media (-moz-pref("user.add-pinned-separator")) {
+    #vertical-pinned-tabs-container:not(:empty)+#vertical-pinned-tabs-container-separator {
+        display: block !important;
+        opacity: 42% !important;
+    }
 }
